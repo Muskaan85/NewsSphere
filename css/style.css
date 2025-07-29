@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    overflow: hidden;
+    background-color: #f7f9fc;
+    color: #222;          
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 47vh;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 1.5s ease-in-out;
+    /* border-bottom:2px solid; */
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+
+.header h1 {
+    font-size: 3rem;
+    background: yellow;
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+    position:relative;
+    top:50px;
+}
+
+
+.header .wrap{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid orange; */
+    position:relative;
+    top:100px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+.header .wrap .newsmania{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #012a4a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 3px #003049;
+    height: 70%;
+    font-weight: bold;
+    
+}
+
+.header .wrap .mark{
+    /* border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px; */
+    color:white;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: #f94144;
+    height:27%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.maincont{
+    width: 100%;
+    height: 100vh;
+    background-color: #F8F9FA;
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    
+    
+}
+
+.maincont .newspaper{
+    /* border: 1px solid white; */
+    height: 53%;
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    margin:auto;
+    transform: translateY(200px);
+    transition: transform 1.5s ease-in-out;
+    
+}
+.maincont .newspaper>div{
+    width: 22%;
+    height: 47vh;
+    /* border:1px solid yellow; */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow-y: scroll;
+}
+
+.maincont .newspaper>div::-webkit-scrollbar{
+    display: none;
+}
+
+.maincont .newspaper .paper1{
+    
+    background-color: #f1f1f1;
+
+}
+
+.maincont .newspaper .paper2{
+    
+    background-color: #f1f1f1;
+}
+
+.maincont .newspaper .paper3{
+    
+    
+    background-color: #f1f1f1;
+}
+
+.maincont .newspaper .paper4{
+    
+    background-color: #f1f1f1; 
+
+}
+
+.maincont .newspaper .heading{
+    width: 22%;
+    height: 7vh;
+    /* border: 1px solid white; */
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #003566, #005f73);
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    position: fixed;
+    
+}
+
+
+.headlines {
+    padding: 20px;
+    color: black;
+    font-size: 14px;
+    list-style-type: disc;
+    margin-top: 50px;
+    
+}
+
+.headlines li {
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+} 
+
+.headlines li a {
+    color: rgb(76, 75, 75);
+    font-weight:bold;
+    text-decoration: none;
+    }
+
+.diagonal-line{
+    height: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #014f86;
+    width: 100%;
+}
+.btn{
+    height: 39px;
+    display:flex;
+    background-color: #014f86;
+    width: 100%;
+    border-top: 5px solid #90e0ef;
+}
+.btn a{
+    margin: auto;
+
+}
+.btn .addnote{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size:30px;
+    font-family: cursive;
+    border: none;
+    background-color: #014f86;
+    color: white;      
+}  
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 700px;
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003566;
+    text-align: center;
+}
+
+.modal-img {
+    display: block;
+    margin: 10px auto;
+    max-width: 90%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: black;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.modal-list li {
+    margin-bottom: 8px;
+}
+
+.modal-list li a {
+    color: rgb(76, 75, 75);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.modal-footer button {
+    background-color: #014f86;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer button:hover {
+    background-color: #02335a;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.open-popup-btn {
+    display: block;
+    margin: 10px auto 20px;
+    background-color: #014f86;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.open-popup-btn:hover {
+    background-color: #02335a;
+}
+
+
+#download-headlines-btn{
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#download-headlines-btn:hover{
+    background-color: #218838;
+}
+
+
+

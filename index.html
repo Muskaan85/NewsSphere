@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NewsSphere</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="header" id="header">
+    <h1>WELCOME TO NEWSSPHERE</h1>
+    <div class="wrap">
+      <a href="./all-news.html"><div class="newsmania">THE NEWSSPHERE</div></a>
+      <p class="mark">
+        Your Gateway to Unified Headlines |
+        Your Gateway to Unified Headlines |
+        Your Gateway to Unified Headlines
+      </p>
+    </div>
+  </div>
+  <main class="maincont">
+    <div class="newspaper">
+      <div class="paper1">
+         <button class="open-popup-btn heading" data-source="economic-times">THE ECONOMIC TIMES</button>
+        <ul class="headlines" id="economic-times-headlines"></ul>
+
+      </div>
+      <div class="paper2">
+        <button class="open-popup-btn heading" data-source="the-hindu">THE HINDU</button>
+        <ul class="headlines" id="the-hindu-headlines"></ul>
+      </div>
+      <div class="paper3">
+         <button class="open-popup-btn heading" data-source="news18">HINDUSTAN TIMES</button>
+        <ul class="headlines" id="news18-headlines"></ul>
+      </div>
+      <div class="paper4">
+        <button class="open-popup-btn heading" data-source="times-of-india">TIMES OF INDIA</button>
+        <ul class="headlines" id="times-of-india-headlines"></ul>
+      </div>
+    </div>
+
+    <!-- download button -->
+    <button id="download-headlines-btn">Download  <i class="fa-solid fa-download fa-sm" style="color: #ffffff;"></i></button>
+    <div class="btn">
+      <a href="./add-note.html" target="_self" rel="next">
+            <button class="addnote">NOTES</button>
+        </a>
+    </div>
+  </main>
+
+  <div class="diagonal-line"></div>
+
+ 
+  <div id="newsModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-header" id="modal-header">News Title</div>
+      <img src="" alt="News Image" class="modal-img" id="modal-image" />
+      <ul class="modal-list" id="modal-list"></ul>
+      <div class="modal-footer">
+        <button id="visit-site-btn">Visit Original Site</button>
+        <button id="screenshot-btn">Take Screenshot</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
